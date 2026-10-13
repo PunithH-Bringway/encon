@@ -1,0 +1,61 @@
+<!--
+title: Contact Us | Encon Engineering Solutions, Malleshwaram, Bengaluru
+desc: Contact Encon Engineering Solutions, Malleshwaram, Bengaluru for STP, ETP, WTP, UF/RO and civil works. Call +91 94481 11405 or email encon417@gmail.com.
+-->
+
+<section class="banner">
+  <img src="assets/img/water-drop.webp" alt="">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a>{I:right}<span>Contact</span></nav>
+    <h1>Let's talk water</h1>
+    <p>Tell us about your site, flow and discharge requirements. An engineer, not a call centre, will get back to you.</p>
+  </div>
+  <div class="wave"><svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path fill="#fff" d="M0,50C240,90 480,10 720,40C960,70 1200,20 1440,46V90H0Z"/></svg></div>
+</section>
+
+<section class="section">
+  <div class="wrap contact-grid">
+    <div class="info-cards">
+      <div class="reveal"><p class="eyebrow">Reach Us</p><h2>Get in touch</h2></div>
+      <div class="info reveal"><span class="ic">{I:pin}</span><div><h3>Office</h3><p><a href="{MAPS}" target="_blank" rel="noopener">{ADDR}</a></p></div></div>
+      <div class="info reveal d1"><span class="ic">{I:phone}</span><div><h3>Call us</h3><p><a href="tel:{PHONE1_T}">{PHONE1}</a><br><a href="tel:{PHONE2_T}">{PHONE2}</a></p></div></div>
+      <div class="info reveal d2"><span class="ic">{I:mail}</span><div><h3>Email</h3><p><a href="mailto:{EMAIL1}">{EMAIL1}</a><br><a href="mailto:{EMAIL2}">{EMAIL2}</a></p></div></div>
+      <div class="info reveal d3"><span class="ic">{I:clock}</span><div><h3>Working hours</h3><p>Monday – Saturday: 9:30 AM – 6:30 PM<br>Sunday: closed</p></div></div>
+    </div>
+
+    <form class="form-card reveal d1" id="enquiry" novalidate>
+      <h2 style="font-size:1.6rem">Request a quote</h2>
+      <p style="margin-bottom:24px">Fields marked * are required. Your enquiry opens in your email app or WhatsApp, ready to send.</p>
+      <div class="form-grid">
+        <div class="field"><label for="f-name">Your name *</label><input id="f-name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="f-org">Company / organisation</label><input id="f-org" name="org" autocomplete="organization"></div>
+        <div class="field"><label for="f-phone">Phone *</label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+        <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email"></div>
+        <div class="field full"><label for="f-service">Service required</label>
+          <select id="f-service" name="service">
+            <option value="">Select a service</option>
+            <option>Sewage Treatment Plant (STP)</option><option>Effluent Treatment Plant (ETP / CETP)</option>
+            <option>Water Treatment Plant (WTP)</option><option>UF / RO System</option><option>Prefabricated Plant</option>
+            <option>Clarifiers / Filters / Aeration</option><option>Civil &amp; Structural Works</option>
+            <option>Waterproofing / Grouting</option><option>O&amp;M / Refurbishment</option><option>Consultancy / DPR</option><option>Other</option>
+          </select>
+        </div>
+        <div class="field full"><label for="f-msg">Your requirement *</label><textarea id="f-msg" name="message" placeholder="e.g. 100 KLD STP for a residential project in Bengaluru, treated water for reuse in flushing"></textarea></div>
+      </div>
+      <div class="form-actions">
+        <button class="btn btn-primary" type="submit">{I:mail} Send by Email</button>
+        <button class="btn btn-wa" type="button" id="send-wa">{WA}Send on WhatsApp</button>
+      </div>
+      <p class="form-note" id="form-note" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="map reveal">
+      <iframe title="Encon Engineering Solutions on Google Maps" src="https://maps.google.com/maps?q=13.004465103149414,77.57625579833984&amp;z=17&amp;hl=en&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <p class="center" style="margin-top:20px"><a class="link-arrow" href="{MAPS}" target="_blank" rel="noopener">Open in Google Maps for directions {I:arrow}</a></p>
+  </div>
+</section>
