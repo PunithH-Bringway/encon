@@ -10,8 +10,9 @@ SRC, OUT = ROOT / 'src', ROOT / 'site'
 DOMAIN = 'https://www.enconengineeringsolutions.com'
 PHONE1, PHONE1_T = '+91 94481 11405', '+919448111405'
 PHONE2, PHONE2_T = '+91 98862 55888', '+919886255888'
-EMAIL1, EMAIL2 = 'encon417@gmail.com', 'projects@enconeng.com'
-ADDR = '#315, Anantha Shukapuri, 7th Main Road, 14th Cross, Vyalikaval, Malleshwaram, Bengaluru 560003'
+PHONE3, PHONE3_T = '+91 91485 20004', '+919148520004'
+EMAIL1, EMAIL2 = 'encon417@gmail.com', 'adenpro4563@gmail.com'
+ADDR = 'No. 315, Anantha Shukapuri, Ground Floor, 14th Cross, 7th Main, Vyalikaval, Malleshwaram, Bengaluru 560003'
 MAPS = 'https://www.google.com/maps?q=13.004465103149414,77.57625579833984&z=17&hl=en'
 
 I = lambda name, cls='icon': f'<svg class="{cls}" aria-hidden="true"><use href="#i-{name}"/></svg>'
@@ -70,11 +71,13 @@ SPRITE = '<svg width="0" height="0" style="position:absolute" aria-hidden="true"
 WA_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.5a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.57.93.95-3.48-.22-.36a9.4 9.4 0 0 1-1.45-5.02c0-5.2 4.24-9.44 9.45-9.44a9.4 9.4 0 0 1 9.44 9.45c0 5.21-4.24 9.44-9.45 9.44zm8.03-17.47A11.3 11.3 0 0 0 12.05.7C5.8.7.72 5.78.72 12.03c0 2 .52 3.95 1.52 5.66L.62 23.7l6.15-1.61a11.3 11.3 0 0 0 5.27 1.34c6.25 0 11.33-5.08 11.33-11.33 0-3.03-1.18-5.87-3.32-8.01z"/></svg>'
 
 SERVICES = [  # (anchor, icon, label)
+ ('design','ruler','Design & Detailed Engineering'),
  ('wtp','droplets','Water Treatment Plants'), ('stp','recycle','Sewage Treatment & Recycle'),
- ('etp','factory','Effluent Treatment & Recycle'), ('uf-ro','filter','UF & RO Systems'),
- ('prefab','box','Prefabricated Plants'), ('clarification','layers','Clarifiers & Filters'),
- ('aeration','wind','Aeration Systems'), ('civil','building','Civil & Structural Works'),
- ('om','wrench','O&M & Consultancy'),
+ ('etp','factory','Effluent Treatment, Recycle & ZLD'), ('uf-ro','filter','UF & RO Systems'),
+ ('prefab','box','Prefabricated Plants'), ('johkasou','home','Johkasou Packaged STPs'),
+ ('clarification','layers','Clarifiers & Filters'), ('aeration','wind','Aeration Systems'),
+ ('chemicals','flask','Chemical Treatment Program'), ('civil','building','Civil & Structural Works'),
+ ('om','wrench','Augmentation, O&M & Consultancy'),
 ]
 NAV = [('index.html','Home'),('about.html','About'),('services.html','Services'),('projects.html','Projects'),('contact.html','Contact')]
 
@@ -121,7 +124,7 @@ def footer():
     <div class="foot-grid">
       <div>
         <a class="brand" href="index.html"><img src="assets/img/logo-emblem.png" alt="" width="221" height="171"><span class="brand-text"><b>ENCON</b><small>Engineering Solutions</small></span></a>
-        <p>An experienced turnkey solution provider for water, sewage and wastewater treatment &amp; recycle systems, serving industrial, institutional, domestic and municipal customers across India.</p>
+        <p>An experienced turnkey solution provider for water, sewage and wastewater treatment &amp; recycle systems including ZLD. Project execution by Encon, with consultancy by our sister wing, ADENPRO Environmental Consultants.</p>
         <a class="btn btn-aqua" style="margin-top:24px" href="assets/docs/encon-company-profile.pdf" download>{I('download')} Company Profile</a>
       </div>
       <div><h4>Quick Links</h4><ul class="foot-links">{''.join(f'<li><a href="{h}">{I("right")}{l}</a></li>' for h, l in NAV)}<li><a href="contact.html#enquiry">{I("right")}Request a Quote</a></li></ul></div>
@@ -129,7 +132,7 @@ def footer():
       <div><h4>Get in Touch</h4>
         <ul class="foot-contact">
           <li>{I('pin')}<a href="{MAPS}" target="_blank" rel="noopener">{ADDR}</a></li>
-          <li>{I('phone')}<span><a href="tel:{PHONE1_T}">{PHONE1}</a><br><a href="tel:{PHONE2_T}">{PHONE2}</a></span></li>
+          <li>{I('phone')}<span><a href="tel:{PHONE1_T}">{PHONE1}</a><br><a href="tel:{PHONE2_T}">{PHONE2}</a><br><a href="tel:{PHONE3_T}">{PHONE3}</a></span></li>
           <li>{I('mail')}<span><a href="mailto:{EMAIL1}">{EMAIL1}</a><br><a href="mailto:{EMAIL2}">{EMAIL2}</a></span></li>
         </ul>
       </div>
@@ -159,11 +162,14 @@ CTA = f'''<section class="section" style="padding-top:0">
   </div>
 </section>'''
 
-LOGOS = [('himatsingka','Himatsingka'),('raymond','Raymond'),('tata-power','Tata Power'),('pepsico','PepsiCo'),('sap','SAP'),
-         ('manipal','Manipal Global'),('century-club','Century Club'),('narayana','The Narayana Group'),('ksrtc','KSRTC'),
-         ('filtrex','Filtrex Technologies'),('everblue','Everblue')]
-WORDS = ['Bangalore International Airport','Thermax','Tata Electronics','ITC Food Creations','Parle','CIPLA',
-         'Mitsubishi Heavy Industries VST','Plansee','Murugappa Water Technology','Indian Design Exports','Gradient India']
+# Customer list from the client's company profile (8.9.25), plus project-list clients without a logo file
+LOGOS = [('bial','Bengaluru International Airport'),('tata-projects','Tata Projects'),('tata-electronics','Tata Electronics'),
+         ('mhi','Mitsubishi Heavy Industries'),('itc','ITC Limited'),('parle','Parle'),('nalco','NALCO, an Ecolab company'),
+         ('sobha','Sobha'),('hiranandani','House of Hiranandani'),('ncc','NCC'),('salarpuria-sattva','Salarpuria Sattva'),
+         ('bagmane','Bagmane'),('raymond','Raymond'),('himatsingka','Himatsingka'),('plansee','Plansee'),('solenis','Solenis'),
+         ('id','Indian Design Exports'),('filtrex','Filtrex Technologies'),('cwd','Clear Water Dynamics'),('eit','EIT'),
+         ('manipal','Manipal Global'),('narayana','The Narayana Group'),('elixer','Elixer'),('century-club','Century Club')]
+WORDS = ['Thermax','CIPLA','Murugappa Water Technology','Gradient India','Dakshina Pinakini']
 def clients():
     tiles = ''.join(f'<div class="logo-tile"><img src="assets/img/clients/{f}.webp" alt="{n}" loading="lazy"></div>' for f, n in LOGOS)
     tiles += ''.join(f'<div class="logo-tile word">{html.escape(w)}</div>' for w in WORDS)
@@ -200,6 +206,8 @@ PROJECTS = [
  ('Gradient India Pvt. Ltd.','CETP · Civil','Civil works','2022','etp civil'),
  ('NJK Enterprises, Unit I','STP','SITC of 20 KLD Daiki Axis prefabricated STP with civil works','2022','stp'),
  ('Ballari Municipal Corporation','WTP','Preparation &amp; submission of DPR for 15 MLD water treatment plant','2022','wtp consult'),
+ ('Ballari Water Treatment Plant (Govt.)','WTP','15 MLD water treatment plant: process design &amp; flow scheme','Ongoing','wtp consult ongoing'),
+ ('Raichur Water Supply Scheme (Govt.)','WTP','Preliminary design engineering at tendering stage: drinking water to 1,406 rural habitations &amp; treated bulk water to 7 urban local bodies','Ongoing','wtp consult ongoing'),
  ('NJK Enterprises, Unit II','STP','SITC of 20 KLD Daiki Axis prefabricated STP with civil works','2023','stp'),
  ('Century Club','STP','SITC of 50 KLD Daiki Axis prefabricated STP with civil works','2023','stp'),
  ('Filtrex Technologies Pvt. Ltd.','CETP','Construction of civil tanks &amp; SITC of electro-mechanical equipment','2023','etp civil'),
@@ -263,7 +271,8 @@ def build():
         body = raw.split('-->', 1)[1]
         body = (body.replace('<!-- @projects -->', projects_table()).replace('<!-- @clients -->', clients())
                     .replace('<!-- @cta -->', CTA).replace('{PHONE1}', PHONE1).replace('{PHONE1_T}', PHONE1_T)
-                    .replace('{PHONE2}', PHONE2).replace('{PHONE2_T}', PHONE2_T).replace('{EMAIL1}', EMAIL1)
+                    .replace('{PHONE2}', PHONE2).replace('{PHONE2_T}', PHONE2_T)
+                    .replace('{PHONE3}', PHONE3).replace('{PHONE3_T}', PHONE3_T).replace('{EMAIL1}', EMAIL1)
                     .replace('{EMAIL2}', EMAIL2).replace('{ADDR}', ADDR).replace('{MAPS}', MAPS)
                     .replace('{WA}', WA_SVG).replace('{PROJECT_COUNT}', str(len(PROJECTS))))
         body = re.sub(r'\{I:([a-z-]+)\}', lambda m: I(m.group(1)), body)
