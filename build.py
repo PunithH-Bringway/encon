@@ -12,6 +12,9 @@ PHONE1, PHONE1_T = '+91 94481 11405', '+919448111405'
 PHONE2, PHONE2_T = '+91 98862 55888', '+919886255888'
 PHONE3, PHONE3_T = '+91 91485 20004', '+919148520004'
 EMAIL1, EMAIL2 = 'encon417@gmail.com', 'adenpro4563@gmail.com'
+EMAIL3 = 'projects@enconeng.com'
+BD_NAME, BD_ROLE = 'Venkatesan G', 'Head, Business Development & Marketing'
+BD_PHONE, BD_PHONE_T, BD_EMAIL = '+91 86752 29114', '+918675229114', 'Venkatesang@enconeng.com'
 ADDR = 'No. 315, Anantha Shukapuri, Ground Floor, 14th Cross, 7th Main, Vyalikaval, Malleshwaram, Bengaluru 560003'
 MAPS = 'https://www.google.com/maps?q=13.004465103149414,77.57625579833984&z=17&hl=en'
 
@@ -133,7 +136,7 @@ def footer():
         <ul class="foot-contact">
           <li>{I('pin')}<a href="{MAPS}" target="_blank" rel="noopener">{ADDR}</a></li>
           <li>{I('phone')}<span><a href="tel:{PHONE1_T}">{PHONE1}</a><br><a href="tel:{PHONE2_T}">{PHONE2}</a><br><a href="tel:{PHONE3_T}">{PHONE3}</a></span></li>
-          <li>{I('mail')}<span><a href="mailto:{EMAIL1}">{EMAIL1}</a><br><a href="mailto:{EMAIL2}">{EMAIL2}</a></span></li>
+          <li>{I('mail')}<span><a href="mailto:{EMAIL1}">{EMAIL1}</a><br><a href="mailto:{EMAIL3}">{EMAIL3}</a><br><a href="mailto:{EMAIL2}">{EMAIL2}</a></span></li>
         </ul>
       </div>
     </div>
@@ -273,7 +276,7 @@ def build():
                     .replace('<!-- @cta -->', CTA).replace('{PHONE1}', PHONE1).replace('{PHONE1_T}', PHONE1_T)
                     .replace('{PHONE2}', PHONE2).replace('{PHONE2_T}', PHONE2_T)
                     .replace('{PHONE3}', PHONE3).replace('{PHONE3_T}', PHONE3_T).replace('{EMAIL1}', EMAIL1)
-                    .replace('{EMAIL2}', EMAIL2).replace('{ADDR}', ADDR).replace('{MAPS}', MAPS)
+                    .replace('{EMAIL2}', EMAIL2).replace('{EMAIL3}', EMAIL3).replace('{BD_NAME}', BD_NAME).replace('{BD_ROLE}', html.escape(BD_ROLE)).replace('{BD_PHONE_T}', BD_PHONE_T).replace('{BD_PHONE}', BD_PHONE).replace('{BD_EMAIL}', BD_EMAIL).replace('{ADDR}', ADDR).replace('{MAPS}', MAPS)
                     .replace('{WA}', WA_SVG).replace('{PROJECT_COUNT}', str(len(PROJECTS))))
         body = re.sub(r'\{I:([a-z-]+)\}', lambda m: I(m.group(1)), body)
         url = DOMAIN + '/' + ('' if f.name == 'index.html' else f.name)
